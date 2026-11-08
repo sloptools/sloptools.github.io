@@ -256,7 +256,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 0 0 18px;
+  margin: 0;
   font: 12px var(--mono);
   color: var(--dim);
 }
@@ -271,20 +271,6 @@ main {
   50% {
     opacity: 0.25;
   }
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-}
-.chips span {
-  padding: 2px 9px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font: 11px var(--mono);
-  color: var(--dim);
 }
 
 /* --- tools ----------------------------------------------------------- */

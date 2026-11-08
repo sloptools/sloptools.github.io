@@ -158,7 +158,6 @@ function home() {
   <h1 class="brand">sloptools</h1>
   <p class="lede">Two desktop tools for pixel textures, PS1 and Quake style. Cut photos up, paint on models, crunch it all down to a palette, and see it live in Blender and Godot.</p>
   <p class="soon"><span class="dot"></span>builds for macOS and windows coming soon · build from source until then</p>
-  <div class="chips"><span>macOS</span><span>windows</span><span>blender</span><span>godot</span><span>MIT</span></div>
 </section>
 ${Object.keys(tools).map(card).join('\n')}
 <section class="shared">
