@@ -1,0 +1,12 @@
+{
+  "name": "sloptools-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node build.mjs && python3 -m http.server -d _site 8080"
+  },
+  "devDependencies": {
+    "marked": "18.1.3"
+  }
+}
