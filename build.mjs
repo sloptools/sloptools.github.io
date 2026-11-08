@@ -113,7 +113,6 @@ const shell = ({ title, description, on, body }) => `<!doctype html>
 </header>
 ${body}
 <footer class="foot">
-  <span>sloptools · MIT · no cookies, no trackers</span>
   <button class="text" id="theme" type="button">theme: system</button>
 </footer>
 <script src="/theme.js"></script>

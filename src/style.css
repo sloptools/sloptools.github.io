@@ -668,7 +668,7 @@ pre {
 
 .foot {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 16px;
   padding: 18px max(16px, calc((100vw - 1120px) / 2));
@@ -735,10 +735,6 @@ button.text:hover {
 @media (max-width: 480px) {
   .bar nav a[href^='https'] {
     display: none;
-  }
-  .foot {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
 
