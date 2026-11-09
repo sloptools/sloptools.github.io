@@ -48,6 +48,12 @@ const tools = {
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c])
 const num = (i) => String(i + 1).padStart(2, '0')
 const github = (name) => `https://github.com/sloptools/${name}`
+const downloads = [
+  ['macOS', 'mac.zip'],
+  ['windows', 'windows.zip'],
+  ['linux', 'linux.tar.gz'],
+]
+const download = (name, file) => `${github(name)}/releases/latest/download/${name}-${file}`
 
 function write(path, html) {
   mkdirSync(join(out, path, '..'), { recursive: true })
@@ -138,7 +144,10 @@ function card(name, i) {
     <div class="actions">
       <a class="button primary" href="/${name}/">read the docs →</a>
       <a class="button" href="${github(name)}">github ↗</a>
-      <span class="button soon-tag">builds soon</span>
+    </div>
+    <div class="downloads">
+      <span class="caps">download</span>
+      ${downloads.map(([os, file]) => `<a href="${download(name, file)}">${os}</a>`).join('\n      ')}
     </div>
   </div>
   <a class="shot" href="/${name}/" aria-label="${name} docs">
@@ -155,8 +164,7 @@ function home() {
 <section class="hero">
   <p class="kicker">// small tools for crunchy textures</p>
   <h1 class="brand">sloptools</h1>
-  <p class="lede">Two desktop tools for pixel textures, PS1 and Quake style. Cut photos up, paint on models, crunch it all down to a palette, and see it live in Blender and Godot.</p>
-  <p class="soon"><span class="dot"></span>builds for macOS and windows coming soon · build from source until then</p>
+  <p class="lede">Small tools for pixel textures, the way the PS1 intended. Cut photos up, paint on models, crunch it all down to a palette. Anti-aliasing not included.</p>
 </section>
 ${Object.keys(tools).map(card).join('\n')}
 <section class="shared">
